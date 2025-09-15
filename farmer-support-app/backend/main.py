@@ -148,7 +148,7 @@ async def analyze_crop(file: UploadFile = File(...)):
 @app.get("/weather")
 async def get_weather(lat: float, lon: float):
     try:
-        if not WEATHER_API_KEY or WEATHER_API_KEY == "295ee47666607625e48535189fad819e":
+        if not WEATHER_API_KEY or WEATHER_API_KEY == "":
             # Return mock data if API key not set
             return {
                 "success": True,
